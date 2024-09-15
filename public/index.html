@@ -3,26 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- This is an SEO Change -->
-    <title>Personal Budget - Budget Management App</title>
-    <meta name="description" content="Discover the best free personal budget app to track your expenses, receive alerts, and manage your finances efficiently.">
-    <meta name="keywords" content="personal budget app, expense tracking, save money, financial planning, free budget tool">
+    <title>Personal Budget</title>
+    <meta name="description" content="A free personal budger app">
+    <meta name="keywords" content="app free budget finance">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+    <style>
+        /* This is A11y Change*/
+        h1 { font-size: 30px; }
+        /* This is A11y Change*/ 
+        i { color: #cc0081; } 
+        /* This is A11y Change*/
+        footer { background-color: #3e8ec7; }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        path.slice{
+            stroke-width:2px;
+        }
+
+        polyline{
+            opacity: .3;
+            stroke: black;
+            stroke-width: 2px;
+            fill: none;
+        }
+       </style>
 </head>
 <body>
 
-<!-- This is an A11y Change -->
-<a href="#main" class="skip" aria-label="Skip to main content">Skip to content</a>
+<a href="#main" class="skip">Skip to content</a>
 
     <nav>
-        <!-- This is a Semantic HTML Change --> 
         <ul>
-            <li><a href="/" aria-label="Home Page">Home Page</a></li>
-            <li><a href="/about.html" aria-label="About Page">About</a></li>
-            <li><a href="/login.html" aria-label="Login Page">Login</a></li>
-            <li><a href="https://google.com" aria-label="Visit Google">Google</a></li>
+            <li><a href="/">Home</a></li>
+            <!-- This is a semantic  change in the HTML page -->
+            <li><a href="/about.html">About Page</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="https://google.com">Google</a></li>
         </ul>
     </nav>
 
@@ -31,13 +51,48 @@
         <h2>A personal-budget management app</h2>
     </div>
 
-    <!-- This is an A11y Change -->
-    <main class="center" id="main" role="main">
+    <main class="center" id="main">
+
         <div class="page-area">
 
             <article>
-                <!-- This is an SEO Change: Modified heading for better SEO keywords -->
-                <h1><u>Track Your Spending Seamlessly</u></h1>
+                <h1>Stay on track</h1>
+                <!-- This is a semantic  change in the HTML page -->
+                <h1>
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </h1>
+            </article>
+    
+            <article>
+                <h1>Alerts</h1>
+                <p>
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </article>
+    
+            <article>
+                <h1>Results</h1>
+                <p>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
+                </p>
+            </article>
+    
+            <article>
+                <h1>Free</h1>
+                <p>
+                    This app is free!!! And you are the only one holding your data!
+                </p>
+            </article>
+    
+            <article>
+                <!-- This is a semantic  change in the HTML page -->
+                <h3>Stay on track</h3>
+                <!--This is SEO change -->
+                <meta name="description" content="Guidance for staying on track">
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
@@ -46,44 +101,40 @@
             </article>
     
             <article>
-                <h1><u>Budget Alerts</u></h1>
+                <h1>Alerts</h1>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </article>
-            <!-- This is a Semantic HTML Change --> 
     
             <article>
-                <h1><u>Financial Results</u></h1>
-                <i>
-                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                    Also, they live happier lives since they spend without guilt or fear because they know it is all accounted for.
-                </i>
-            </article>
-            <!-- This is a Semantic HTML Change --> 
-            <article>
-                <h1><u>Free and Secure</u></h1>
-                <b>
-                    This app is free!!! And you are the only one holding your data!
-                </b>
-            </article>
-
-            <!-- This is an A11y Change -->
-            <article aria-labelledby="chart-title" aria-describedby="chart-description">
-                <h1 id="chart-title"><u>Chart</u></h1>
+                <!-- This is SEO change -->
+                <h2><u>Results</u></h2>
                 <p>
-                    <canvas id="myChart" width="400" height="400" aria-label="Budget chart"></canvas>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
                 </p>
-                <p id="chart-description">This chart visualizes your spending data.</p>
             </article>
-
+    
+            <article>
+                <!--This is SEO change -->
+                <h1><i>chart</i></h1>
+                <p>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </p>
+            </article>
+            <div>
+                <h1>D3.js</h1>
+                <svg width="960px", height="650px" style="margin: 5px;"></svg>
+            </div>
         </div>
+
     </main>
 
     <footer class="bottom">
         <div class="center">
-            <!-- This is an SEO Change: Added copyright year for relevancy -->
-            All rights reserved &copy; (2024) - Fabio Nolasco
+            All rights reserved &copy; Fabio Nolasco
         </div>
     </footer>
 
@@ -100,6 +151,9 @@
                             '#ff6384',
                             '#36a2eb',
                             '#fd6b19',
+                            '#DDFF33',
+                            '#7733FF',
+                            '#33FF4F',
                         ]
                     }
                 ],
@@ -115,18 +169,162 @@
         }
 
         function getBudget() {
-            axios.get('http://localhost:3000/budget')
+            axios.get('/budget')
             .then(function (res) {
                 for (var i = 0; i < res.data.myBudget.length; i++) {
                     dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
                     dataSource.labels[i] = res.data.myBudget[i].title;
-                    createChart();
                 }
+                createChart();
             });
         }
 
         getBudget();
     </script>
+     <script src="http://d3js.org/d3.v3.min.js"></script>
+
+     <script>
+         var svg = d3.select("svg")
+             .append("g")
+ 
+         svg.append("g")
+             .attr("class", "slices");
+         svg.append("g")
+             .attr("class", "labels");
+         svg.append("g")
+             .attr("class", "lines");
+ 
+         var width = 960,
+             height = 450,
+             radius = Math.min(width, height) / 2;
+ 
+         var pie = d3.layout.pie()
+             .sort(null)
+             .value(function(d) {
+                 return d.value;
+             });
+ 
+         var arc = d3.svg.arc()
+             .outerRadius(radius * 0.8)
+             .innerRadius(radius * 0.4);
+ 
+         var outerArc = d3.svg.arc()
+             .innerRadius(radius * 0.9)
+             .outerRadius(radius * 0.9);
+ 
+         svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+ 
+         var key = function(d){ return d.data.label; };
+ 
+         var color = d3.scale.ordinal()
+             .domain([])
+             .range(['#ffcd56',
+                            '#ff6384',
+                            '#36a2eb',
+                            '#fd6b19',
+                            '#DDFF33',
+                            '#7733FF',
+                            '#33FF4F',]);
+ 
+         axios.get('/budget').then(res => {
+             console.log(res);
+             var data = res.data.myBudget.map(obj => {
+                 return {label: obj.title, value: obj.budget}
+             })
+             change(data);
+         })
+ 
+         function change(data) {
+ 
+             /* ------- PIE SLICES -------*/
+             var slice = svg.select(".slices").selectAll("path.slice")
+                 .data(pie(data), key);
+ 
+             slice.enter()
+                 .insert("path")
+                 .style("fill", function(d) { return color(d.data.label); })
+                 .attr("class", "slice");
+ 
+             slice		
+                 .transition().duration(1000)
+                 .attrTween("d", function(d) {
+                     this._current = this._current || d;
+                     var interpolate = d3.interpolate(this._current, d);
+                     this._current = interpolate(0);
+                     return function(t) {
+                         return arc(interpolate(t));
+                     };
+                 })
+ 
+             slice.exit()
+                 .remove();
+ 
+             /* ------- TEXT LABELS -------*/
+ 
+             var text = svg.select(".labels").selectAll("text")
+                 .data(pie(data), key);
+ 
+             text.enter()
+                 .append("text")
+                 .attr("dy", ".35em")
+                 .text(function(d) {
+                     return d.data.label;
+                 });
+             
+             function midAngle(d){
+                 return d.startAngle + (d.endAngle - d.startAngle)/2;
+             }
+ 
+             text.transition().duration(1000)
+                 .attrTween("transform", function(d) {
+                     this._current = this._current || d;
+                     var interpolate = d3.interpolate(this._current, d);
+                     this._current = interpolate(0);
+                     return function(t) {
+                         var d2 = interpolate(t);
+                         var pos = outerArc.centroid(d2);
+                         pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
+                         return "translate("+ pos +")";
+                     };
+                 })
+                 .styleTween("text-anchor", function(d){
+                     this._current = this._current || d;
+                     var interpolate = d3.interpolate(this._current, d);
+                     this._current = interpolate(0);
+                     return function(t) {
+                         var d2 = interpolate(t);
+                         return midAngle(d2) < Math.PI ? "start":"end";
+                     };
+                 });
+ 
+             text.exit()
+                 .remove();
+ 
+             /* ------- SLICE TO TEXT POLYLINES -------*/
+ 
+             var polyline = svg.select(".lines").selectAll("polyline")
+                 .data(pie(data), key);
+             
+             polyline.enter()
+                 .append("polyline");
+ 
+             polyline.transition().duration(1000)
+                 .attrTween("points", function(d){
+                     this._current = this._current || d;
+                     var interpolate = d3.interpolate(this._current, d);
+                     this._current = interpolate(0);
+                     return function(t) {
+                         var d2 = interpolate(t);
+                         var pos = outerArc.centroid(d2);
+                         pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+                         return [arc.centroid(d2), outerArc.centroid(d2), pos];
+                     };			
+                 });
+             
+             polyline.exit()
+                 .remove();
+         };
+     </script>
 
 </body>
 </html>
